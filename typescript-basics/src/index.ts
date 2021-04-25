@@ -12,5 +12,5 @@ const myNum = ('15' as unknown) as number % 2;
 console.log(arrays.cut3(mixArr));
 console.log(numbers.sum(arrSum, myNum));
 console.log(strings.capitalize('the quick brown fox'));
-console.log(numbers.multiply('5', 8));
+console.log(numbers.multiply(parseInt('5', 10), 8));
 console.log(arrays.lgNum(mixArr));
