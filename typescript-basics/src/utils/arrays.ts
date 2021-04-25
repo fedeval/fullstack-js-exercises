@@ -1,6 +1,7 @@
 // Concatenate two arrays
 
-const concatArr = (arr1: (number[] | string[]), arr2: (number[] | string[])) => {
+const concatArr = (arr1: (number | string)[], arr2: (number | string)[]): 
+(number | string)[] => {
   return [...arr1, ...arr2];
 };
 
@@ -15,18 +16,18 @@ const addArr = (arr: number[]): number => {
 };
 
 // Find the largest number in an array
-const lgNum = (arr: number[]): number => {
+const lgNum = (arr: (number | string)[]): number => {
   let largest = 0;
   arr.forEach((x) => {
     if (x > largest) {
-      largest = x;
+      largest = x as number;
     }
   });
   return largest;
 };
 
 // Remove the 3rd item from an array
-const cut3 = (arr: (number[] | string[])) => {
+const cut3 = (arr: (number | string)[]) => {
   arr.splice(2, 1);
   return arr;
 };
