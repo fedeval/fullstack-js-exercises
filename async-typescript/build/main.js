@@ -167,16 +167,16 @@ var userOptions = function (mochaObject) { return __awaiter(void 0, void 0, void
         switch (_a.label) {
             case 0: return [4 /*yield*/, milkQ()];
             case 1:
-                milkPicked = _a.sent();
+                milkPicked = (_a.sent());
                 milkChoice = parseInt(milkPicked);
                 return [4 /*yield*/, espressoQ()];
             case 2:
-                espPicked = _a.sent();
+                espPicked = (_a.sent());
                 espChoice = parseInt(espPicked);
                 if (!(mochaObject instanceof PeppermintMocha)) return [3 /*break*/, 4];
                 return [4 /*yield*/, peppermintQ()];
             case 3:
-                pepPicked = _a.sent();
+                pepPicked = (_a.sent());
                 pepChoice = parseInt(pepPicked);
                 mochaObject.peppermintSyrup = pepChoice;
                 _a.label = 4;
@@ -196,7 +196,7 @@ var main = function () {
             switch (_b.label) {
                 case 0: return [4 /*yield*/, showMenu()];
                 case 1:
-                    optionPicked = _b.sent();
+                    optionPicked = (_b.sent());
                     menuChoice = parseInt(optionPicked);
                     _a = menuChoice;
                     switch (_a) {
