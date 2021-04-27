@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var arrays_1 = __importDefault(require("../utilities/arrays"));
 var numbers_1 = __importDefault(require("../utilities/numbers"));
+var strings_1 = __importDefault(require("../utilities/strings"));
 /* Your task is to write at least one spec per function used on the index.ts file.
 There should be at least 7 specs.
 You must use at least 5 different matchers for your tests.
@@ -24,5 +25,11 @@ describe("sum", function () {
     });
     it("returns the sum of two numbers", function () {
         expect(numbers_1.default.sum(num1, num2)).toEqual(3);
+    });
+});
+describe("capitalize", function () {
+    it("returns a string with the first letter capitalized", function () {
+        var testSentence = "hello, world";
+        expect(strings_1.default.capitalize(testSentence)[0]).toMatch(/[a-z]/);
     });
 });

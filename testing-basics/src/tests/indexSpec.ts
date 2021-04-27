@@ -1,5 +1,6 @@
 import arrays from "../utilities/arrays"
 import numbers from "../utilities/numbers"
+import strings from "../utilities/strings"
 
 /* Your task is to write at least one spec per function used on the index.ts file.
 There should be at least 7 specs.
@@ -23,5 +24,12 @@ describe("sum", () => {
 
   it("returns the sum of two numbers", () => {
     expect(numbers.sum(num1, num2)).toEqual(3)
+  })
+})
+
+describe("capitalize", () => {
+  it("returns a string with the first letter capitalized", () => {
+    const testSentence = "hello, world"
+    expect(strings.capitalize(testSentence)[0]).toMatch(/[A-Z]/)
   })
 })
