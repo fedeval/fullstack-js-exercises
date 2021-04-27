@@ -30,6 +30,17 @@ describe("sum", function () {
 describe("capitalize", function () {
     it("returns a string with the first letter capitalized", function () {
         var testSentence = "hello, world";
-        expect(strings_1.default.capitalize(testSentence)[0]).toMatch(/[a-z]/);
+        expect(strings_1.default.capitalize(testSentence)[0]).toMatch(/[A-Z]/);
+    });
+});
+describe("multiply", function () {
+    var num1 = 4;
+    var num2 = 5;
+    var zero = 0;
+    it("returns the product of two numbers", function () {
+        expect(numbers_1.default.multiply(num1, num2)).toEqual(20);
+    });
+    it("returns zero if one of the arguments is zero", function () {
+        expect(numbers_1.default.multiply(zero, num1)).toBeFalsy();
     });
 });

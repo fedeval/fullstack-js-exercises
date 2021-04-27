@@ -33,3 +33,17 @@ describe("capitalize", () => {
     expect(strings.capitalize(testSentence)[0]).toMatch(/[A-Z]/)
   })
 })
+
+describe("multiply", () => {
+  const num1 = 4
+  const num2 = 5
+  const zero = 0
+
+  it("returns the product of two numbers", () => {
+    expect(numbers.multiply(num1, num2)).toEqual(20)
+  })
+
+  it("returns zero if one of the arguments is zero", () => {
+    expect(numbers.multiply(zero, num1)).toBeFalsy()
+  })
+})
