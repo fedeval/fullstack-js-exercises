@@ -1,4 +1,5 @@
 import arrays from "../utilities/arrays"
+import numbers from "../utilities/numbers"
 
 /* Your task is to write at least one spec per function used on the index.ts file.
 There should be at least 7 specs.
@@ -9,5 +10,18 @@ describe("cut3", () => {
     const testArray = [1, 2, 4, 5]
     const thirdElement = testArray[2]
     expect(arrays.cut3(testArray)).not.toContain(thirdElement)
+  })
+})
+
+describe("sum", () => {
+  const num1 = 1
+  const num2 = 2
+
+  it("returns a number", () => {
+    expect(typeof numbers.sum(num1,num2)).toBe("number")
+  })
+
+  it("returns the sum of two numbers", () => {
+    expect(numbers.sum(num1, num2)).toEqual(3)
   })
 })
