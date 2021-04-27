@@ -44,3 +44,9 @@ describe("multiply", function () {
         expect(numbers_1.default.multiply(zero, num1)).toBeFalsy();
     });
 });
+describe("lgNum", function () {
+    it("returns the largest number in the array", function () {
+        var testArray = [4, 1, 20, 14, 4];
+        expect(arrays_1.default.lgNum(testArray)).toEqual(20);
+    });
+});

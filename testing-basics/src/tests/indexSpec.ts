@@ -47,3 +47,10 @@ describe("multiply", () => {
     expect(numbers.multiply(zero, num1)).toBeFalsy()
   })
 })
+
+describe("lgNum", () => {
+  it("returns the largest number in the array", () => {
+    const testArray = [4, 1, 20, 14, 4]
+    expect(arrays.lgNum(testArray)).toEqual(20)
+  })
+})
