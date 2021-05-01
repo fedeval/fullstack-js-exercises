@@ -26,9 +26,9 @@ it("should get a list of NAFTA countries", () => __awaiter(void 0, void 0, void 
     const data = yield index_1.default.getRegionCountries('NAFTA');
     expect(data).toEqual(['Canada', 'Mexico', 'United States of America']);
 }));
-// it("should get capitals of NAFTA countries", async () => {
-//   const data = await countries.getRegionCapitals('nafta');
-//   expect(data).toEqual([
-//     'Ottawa', 'Mexico City', 'Washington, D.C.'
-//   ]);
-// });
+it("should get capitals of NAFTA countries", () => __awaiter(void 0, void 0, void 0, function* () {
+    const data = yield index_1.default.getRegionCapitals('nafta');
+    expect(data).toEqual([
+        'Ottawa', 'Mexico City', 'Washington, D.C.'
+    ]);
+}));

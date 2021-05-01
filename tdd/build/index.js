@@ -25,7 +25,6 @@ function getCountry(country) {
         const getApi = yield axios_1.default(`https://restcountries.eu/rest/v2/name/${country}`);
         const data = getApi.data;
         const { capital, region, numericCode } = data[0];
-        console.log(region);
         return {
             capital: capital,
             region: region,
@@ -48,9 +47,15 @@ function getRegionCountries(regionalbloc) {
 /** Create getRegionCapitals function here */
 function getRegionCapitals(regionalbloc) {
     return __awaiter(this, void 0, void 0, function* () {
+        const getApi = yield axios_1.default(`https://restcountries.eu/rest/v2/regionalbloc/${regionalbloc}`);
+        const data = getApi.data;
+        const capitals = [];
+        for (let i = 0; i < data.length; i++) {
+            capitals.push(data[i].capital);
+        }
+        return capitals;
     });
 }
-getCountry('france');
 exports.default = {
     getCountry,
     getRegionCountries,

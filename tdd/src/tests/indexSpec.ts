@@ -15,9 +15,9 @@ it("should get a list of NAFTA countries", async () => {
   expect(data).toEqual(['Canada', 'Mexico', 'United States of America']);
 });
 
-// it("should get capitals of NAFTA countries", async () => {
-//   const data = await countries.getRegionCapitals('nafta');
-//   expect(data).toEqual([
-//     'Ottawa', 'Mexico City', 'Washington, D.C.'
-//   ]);
-// });
+it("should get capitals of NAFTA countries", async () => {
+  const data = await countries.getRegionCapitals('nafta');
+  expect(data).toEqual([
+    'Ottawa', 'Mexico City', 'Washington, D.C.'
+  ]);
+});
