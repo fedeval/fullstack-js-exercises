@@ -25,6 +25,7 @@ function getCountry(country) {
         const getApi = yield axios_1.default(`https://restcountries.eu/rest/v2/name/${country}`);
         const data = getApi.data;
         const { capital, region, numericCode } = data[0];
+        console.log(region);
         return {
             capital: capital,
             region: region,
@@ -49,7 +50,7 @@ function getRegionCapitals(regionalbloc) {
     return __awaiter(this, void 0, void 0, function* () {
     });
 }
-getCountry('canada');
+getCountry('france');
 exports.default = {
     getCountry,
     getRegionCountries,
